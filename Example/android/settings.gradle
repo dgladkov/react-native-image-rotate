@@ -1,0 +1,5 @@
+rootProject.name = 'ImageRotateExample'
+
+include ':app'
+include ':react-native-image-rotate'
+project(':react-native-image-rotate').projectDir = new File(rootProject.projectDir, '../../android')
