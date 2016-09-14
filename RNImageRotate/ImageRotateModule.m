@@ -23,16 +23,16 @@ static CGFloat DegreesToRadians(CGFloat degrees) {
 /**
  * Rotates an image and adds the result to the image store.
  *
- * @param imageTag A URL, a string identifying an asset etc.
+ * @param imageURL A URL, a string identifying an asset etc.
  * @param angle Rotation angle in degrees
  */
-RCT_EXPORT_METHOD(rotateImage:(NSString *)imageTag
+RCT_EXPORT_METHOD(rotateImage:(NSURLRequest *)imageURL
                   angle:(nonnull NSNumber *)angle
                   successCallback:(RCTResponseSenderBlock)successCallback
                   errorCallback:(RCTResponseErrorBlock)errorCallback)
 {
 
-  [_bridge.imageLoader loadImageWithTag:imageTag callback:^(NSError *error, UIImage *image) {
+  [_bridge.imageLoader loadImageWithURLRequest:imageURL callback:^(NSError *error, UIImage *image) {
     if (error) {
       errorCallback(error);
       return;
