@@ -1,6 +1,6 @@
 {
   "name": "react-native-image-rotate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Rotate images from your react-native JavaScript code",
   "main": "index.js",
   "scripts": {
