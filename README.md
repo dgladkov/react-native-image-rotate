@@ -1,6 +1,6 @@
 # react-native-image-rotate
 
-This project support react-native >= 0.40.0
+This project supports react-native >= 0.40.0
 
 This module is meant to be used together with react-native's
 [ImageEditor](https://github.com/facebook/react-native/blob/master/Libraries/Image/ImageEditor.js)
@@ -14,7 +14,7 @@ First install the package via npm
 
 then use [rnpm](https://github.com/rnpm/rnpm) to link native libraries
 
-`$ rnpm link`
+`$ react-native link`
 
 ## Usage
 
