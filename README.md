@@ -1,5 +1,7 @@
 # react-native-image-rotate
 
+This project support react-native >= 0.40.0
+
 This module is meant to be used together with react-native's
 [ImageEditor](https://github.com/facebook/react-native/blob/master/Libraries/Image/ImageEditor.js)
 to create full-featured crop tool
