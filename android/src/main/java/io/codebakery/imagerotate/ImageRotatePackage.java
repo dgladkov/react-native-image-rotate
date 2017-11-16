@@ -18,7 +18,6 @@ public class ImageRotatePackage implements ReactPackage {
             new ImageRotateModule(reactContext));
     }
 
-    @Override
     public List<Class<? extends JavaScriptModule>> createJSModules() {
         return Collections.emptyList();
     }
