@@ -14,7 +14,7 @@ First install the package via npm
 
 then use [rnpm](https://github.com/rnpm/rnpm) to link native libraries
 
-`$ react-native link`
+`$ react-native link react-native-image-rotate`
 
 ## Usage
 
