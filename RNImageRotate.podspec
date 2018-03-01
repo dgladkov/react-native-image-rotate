@@ -1,13 +1,15 @@
 require 'json'
-version = JSON.parse(File.read('package.json'))["version"]
+
+package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
 
 Pod::Spec.new do |s|
 
   s.name            = "RNImageRotate"
-  s.version         = version
+  s.version         = package['version']
+  s.summary         = package['description']
+  s.description     = package['description']
   s.homepage        = "https://github.com/dgladkov/react-native-image-rotate"
-  s.summary         = "Rotate images from your react-native JavaScript code"
-  s.license         = "MIT"
+  s.license         = package['license']
   s.author          = { "Dmitry Gladkov" => "dmitry.gladkov@gmail.com" }
   s.platform        = :ios, "7.0"
   s.source          = { :git => "https://github.com/dgladkov/react-native-image-rotate.git", :tag => s.version.to_s }
