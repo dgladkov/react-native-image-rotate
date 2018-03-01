@@ -18,7 +18,7 @@ public class ImageRotatePackage implements ReactPackage {
             new ImageRotateModule(reactContext));
     }
 
-    @Override
+    // Deprecated RN 0.47
     public List<Class<? extends JavaScriptModule>> createJSModules() {
         return Collections.emptyList();
     }
