@@ -350,7 +350,7 @@ public class ImageRotateModule extends ReactContextBaseJavaModule {
         File externalCacheDir = context.getExternalCacheDir();
         File internalCacheDir = context.getCacheDir();
         File cacheDir;
-        if (externalCacheDir == null && externalCacheDir == null) {
+        if (externalCacheDir == null && internalCacheDir == null) {
             throw new IOException("No cache directory available");
         }
         if (externalCacheDir == null) {
