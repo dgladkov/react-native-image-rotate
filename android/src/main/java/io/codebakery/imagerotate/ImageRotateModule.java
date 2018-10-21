@@ -246,6 +246,9 @@ public class ImageRotateModule extends ReactContextBaseJavaModule {
                 rotateMatrix.postRotate(mAngle);
 
                 return Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), rotateMatrix, true);
+            } catch (OutOfMemoryError outOfMemoryError) {
+                // we are out of memory
+                throw new RuntimeException("We are out of memory");
             } finally {
                 if (inputStream != null) {
                     inputStream.close();
@@ -350,7 +353,7 @@ public class ImageRotateModule extends ReactContextBaseJavaModule {
         File externalCacheDir = context.getExternalCacheDir();
         File internalCacheDir = context.getCacheDir();
         File cacheDir;
-        if (externalCacheDir == null && externalCacheDir == null) {
+        if (externalCacheDir == null && internalCacheDir == null) {
             throw new IOException("No cache directory available");
         }
         if (externalCacheDir == null) {
